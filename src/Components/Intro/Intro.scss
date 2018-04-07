@@ -1,0 +1,44 @@
+@import '../../Style/palette.scss';
+
+.Intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.Intro-video {
+  width: 400px;
+  height: 400px;
+}
+
+.Intro-manifeste {
+  flex-grow: 1;
+  flex-basis: 344px;
+  width: 500px;
+  height: auto;
+
+  &__image {
+    background: no-repeat center/80% url(../../assets/poing-levé.jpg);
+  }
+
+  &__sign {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  
+  .sign__button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    &>i {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      background-color: $hoover;
+      color: white;
+    }
+  }
+}
