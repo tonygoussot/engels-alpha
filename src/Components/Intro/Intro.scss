@@ -36,6 +36,7 @@
   flex-basis: 344px;
   width: 400px;
   height: auto;
+  margin-top: 0px;
 
   &__image {
     height: 144px;
@@ -76,4 +77,12 @@
 
 .Manifeste > p {
   margin-bottom: 7px !important;
+}
+
+.col-three {
+  margin: 0px 0 0 5px;
+}
+
+.timeline-Widget.timeline-Widget--edge {
+  border-radius: 2px !important;
 }

@@ -9,7 +9,8 @@ class Intro extends Component {
 	constructor () {
 		super();
 		this.state = {
-			url: '',
+			tractoFile: '',
+			imgPl: '',
 			availWidth: window.screen.availWidth
 		};
 	}
@@ -27,9 +28,10 @@ class Intro extends Component {
 		firebase.initializeApp(config);
 
 		const storage   = firebase.storage();
-		const tractoRef = storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf')
-		console.log(storage);
-		tractoRef.getDownloadURL().then(url => this.setState({url}));
+		const plRef = storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+		const tractoRef = storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
+		tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
+		plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
 	}
 
 	render () {
@@ -68,7 +70,7 @@ class Intro extends Component {
 							</div>
 						</div>
 						<div className="card-action">
-							<a className="downloads" href={this.state.url}>
+							<a className="downloads" href={this.state.tractoFile}>
 								<i className="material-icons">file_download</i>
 								<span>TELECHARGER LE TRACT</span>
 							</a>
@@ -80,7 +82,7 @@ class Intro extends Component {
 				<div className="col-two">
 					<div className="Intro-manifeste card">
 						<div className="Intro-manifeste__image card-image">
-							<img src={"/poing-levé.jpg"}/>
+							<img src={this.state.imgPl}/>
 							<span className="card-title">LE MANIFESTE</span>
 						</div>
 						<div className="Intro-manifeste__texte card-content">
