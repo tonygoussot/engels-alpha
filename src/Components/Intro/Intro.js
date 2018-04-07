@@ -34,14 +34,14 @@ class Intro extends Component {
 						</div>
 					</div>
 
-					<a className="twitter-timeline card"
+					{/*<a className="twitter-timeline card"
 					   data-width="400"
 					   data-height="600"
 					   data-theme="light"
 					   data-link-color="#E81C4F"
 					   href="https://twitter.com/LaFeteaMacron">
 						Tweets by TwitterDev
-					</a>
+					</a>*/}
 				</div>
 
 				<div className="col-two">
@@ -61,8 +61,6 @@ class Intro extends Component {
 							</a>
 						</div>
 					</div>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/PJPi49pqDt8?rel=0" frameborder="0"
-					        allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 
 			</div>
