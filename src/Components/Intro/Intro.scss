@@ -18,7 +18,13 @@
   height: auto;
 
   &__image {
-    background: no-repeat center/80% url(../../assets/poing-levé.jpg);
+      height: 144px;
+    overflow: hidden;
+    position: relative;
+
+    > img {
+      top: -160px!important;
+    }
   }
 
   &__sign {
@@ -31,6 +37,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: $background-color !important;
 
     &>i {
       margin-right: 5px;
@@ -41,4 +48,8 @@
       color: white;
     }
   }
+}
+
+.Intro-manifeste__texte {
+  color: black;
 }
