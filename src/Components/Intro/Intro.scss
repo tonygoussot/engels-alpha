@@ -12,6 +12,25 @@
   height: 400px;
 }
 
+.Intro-networks {
+  color: $background-color;
+
+  .logos {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .social-networks > svg,
+  .social-networks > span {
+    font-size: 150px;
+    text-decoration: none;
+    color: $background-color;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
 .Intro-manifeste {
   flex-grow: 1;
   flex-basis: 344px;
@@ -43,12 +62,12 @@
     & > i {
       margin-right: 5px;
     }
-
-    &:hover {
-      background-color: $hoover;
-      color: white;
-    }
   }
+}
+
+.downloads {
+  display: flex;
+  color: $background-color !important;
 }
 
 .Intro-manifeste__texte {

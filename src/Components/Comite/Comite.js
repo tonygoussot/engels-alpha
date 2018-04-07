@@ -20,7 +20,7 @@ class Comite extends Component {
 		return (
 			<div className="Comite">
 				<div className='Comite__title'>
-					<h1> Trouvez votre comité sur notre carte interactive </h1>
+					<h1> Trouvez votre comité local sur notre carte interactive </h1>
 					<span> Il n'existe pas encore ? Créez-le ! </span>
 				</div>
 				<iframe src="https://www.google.com/maps/d/embed?mid=1LbB_kfMW6n_iKommVWPwmoLZELO6J0Vo"
