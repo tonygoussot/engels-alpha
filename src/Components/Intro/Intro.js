@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Intro.scss';
-import {manifeste} from "./manifeste";
+import Manifeste from './Manifeste.js';
 
 class Intro extends Component {
 	render () {
@@ -51,7 +51,7 @@ class Intro extends Component {
 							<span className="card-title">LE MANIFESTE</span>
 						</div>
 						<div className="Intro-manifeste__texte card-content">
-							{manifeste}
+							<Manifeste />
 						</div>
 						<div className="Intro-manifeste__sign card-action">
 							<a href={"https://www.change.org/p/le-peuple-appel-au-samedi-5-mai-faire-sa-f%C3%AAte-%C3%A0-macron"}
