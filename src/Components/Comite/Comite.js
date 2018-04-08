@@ -43,7 +43,14 @@ class Comite extends Component {
 			     style={{width: this.state.elemWidth}}>
 				<div className='Comite__title'>
 					<h1> Trouvez votre comité local sur notre carte interactive </h1>
-					<span> Il n'existe pas encore ? Créez-le ! </span>
+
+					<div className="contact">
+						<a className="contact__link"
+						   href="mailto:comitefeteamacron@gmail.com">
+							<span> Vous ne trouvez pas de comité ? Créez-le et contactez nous : comitefeteamacron@gmail.com </span>
+						</a>
+					</div>
+
 				</div>
 				<iframe src="https://www.google.com/maps/d/embed?mid=1LbB_kfMW6n_iKommVWPwmoLZELO6J0Vo"
 				        width={this.state.frameRes.w}

@@ -1,3 +1,5 @@
+@import '../../Style/palette';
+
 .Comite {
     display: flex;
     flex-direction: column;
@@ -7,4 +9,12 @@
         padding: 2rem;
     }
 
+    .contact > a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .contact > span:hover {
+        color: $secondary-color !important;
+    }
 }
