@@ -13,3 +13,8 @@ handlers:
    static_files: build/static/
    upload: build/(.*)
 # [END handlers]
+
+# [START skip_files]
+skip_files:
+- ./yarn.lock$
+# [END skip_files]
