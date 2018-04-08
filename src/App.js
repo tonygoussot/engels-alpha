@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import $ from 'jquery';
 
 import Header from "./Components/Header/Header";
 import Intro from "./Components/Intro/Intro";
