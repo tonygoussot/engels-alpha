@@ -8,13 +8,22 @@
 }
 
 .Intro-video {
-  width: 400px;
-  height: 400px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.Intro-networks {
+.facebook-responsive {
+  overflow: hidden;
+}
+
+.facebook-responsive iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.Intro-networks,
+.Intro-resources {
+  flex-grow: 1;
   color: $background-color;
 
   .logos {
@@ -35,10 +44,9 @@
 
 .Intro-manifeste {
   flex-grow: 1;
-  flex-basis: 344px;
-  width: 400px;
   height: auto;
-  margin-top: 0px;
+  margin-top: 0;
+  text-align: justify;
 
   &__image {
     height: 144px;
@@ -82,7 +90,7 @@
 }
 
 .col-three {
-  margin: 0px 0 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .timeline-Widget.timeline-Widget--edge {

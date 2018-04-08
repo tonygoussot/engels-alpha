@@ -5,20 +5,42 @@ import {calcRes} from "../../Helpers/calcRes";
 class Comite extends Component {
 	constructor (props) {
 		super(props);
-		this.state = {frameRes: {w: 0, h: 0}};
+		this.state         = {
+			frameRes: {w: 0, h: 0},
+			elemWidth: props.width
+		};
+		this.setIframeSize = this.setIframeSize.bind(this);
+	}
+
+	setElementsWidth (width) {
+		this.setState({elemWidth: width});
+	}
+
+	setIframeSize (newWidth) {
+		const resRatio = 16 / 9;
+		this.setState(() => ({
+			frameRes: calcRes(newWidth, resRatio)
+		}));
 	}
 
 	componentWillMount () {
-		const resRatio    = 1.7;
-		const screenWidth = window.screen.availWidth;
-		this.setState(() => ({
-			frameRes: calcRes(screenWidth, resRatio)
-		}));
+		this.setIframeSize(this.props.width);
+		this.setElementsWidth(this.props.width);
+	}
+
+	componentWillReceiveProps (nextProps) {
+		if (nextProps.width && nextProps.width !== this.state.frameRes.w) {
+			this.setIframeSize(nextProps.width);
+		}
+		if (nextProps.width && nextProps.width !== this.state.width) {
+			this.setElementsWidth(nextProps.width);
+		}
 	}
 
 	render () {
 		return (
-			<div className="Comite">
+			<div className="Comite"
+			     style={{width: this.state.elemWidth}}>
 				<div className='Comite__title'>
 					<h1> Trouvez votre comité local sur notre carte interactive </h1>
 					<span> Il n'existe pas encore ? Créez-le ! </span>

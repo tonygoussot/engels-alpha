@@ -6,13 +6,29 @@ import firebase from 'firebase/app';
 import 'firebase/storage';
 
 class Intro extends Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state = {
 			tractoFile: '',
 			imgPl: '',
-			availWidth: window.screen.availWidth
+			screenWidth: props.width,
+			elemWidth: props.width
 		};
+	}
+
+	setElementsWidth (width) {
+		const capElementsWidth = width > 400 ? 400 : width;
+		this.setState({elemWidth: capElementsWidth, screenWidth: width});
+	}
+
+	componentWillMount () {
+		this.setElementsWidth(this.props.width);
+	}
+
+	componentWillReceiveProps (nextProps) {
+		if (nextProps.width && nextProps.width !== this.state.elemWidth) {
+			this.setElementsWidth(nextProps.width);
+		}
 	}
 
 	componentDidMount () {
@@ -28,7 +44,7 @@ class Intro extends Component {
 		firebase.initializeApp(config);
 
 		const storage   = firebase.storage();
-		const plRef = storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+		const plRef     = storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
 		const tractoRef = storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
 		tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 		plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
@@ -39,10 +55,13 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
-					<div className="fb-video Intro-video card"
-					     data-href="https://www.facebook.com/lafeteamacron/videos/2031186810482075/"
-					     data-width="400"
-					     data-show-text="false">
+					<div className="facebook-responsive" style={{'max-width': this.state.elemWidth}}>
+						<div className="fb-video Intro-video card"
+						     style={{width: this.state.elemWidth-10, height: this.state.elemWidth-10}}
+						     data-href="https://www.facebook.com/lafeteamacron/videos/2031186810482075/"
+						     data-width={this.state.elemWidth}
+						     data-show-text="false">
+						</div>
 					</div>
 
 					<div className="Intro-networks card">
@@ -63,8 +82,8 @@ class Intro extends Component {
 						</div>
 					</div>
 
-					<div className="Intro-networks card">
-						<div className="Intro-manifeste__title card-content">
+					<div className="Intro-resources card">
+						<div className="Intro-resources__title card-content">
 							<div className="card-title">
 								LE TRACT AUX CHEMINOT•E•S
 							</div>
@@ -79,7 +98,7 @@ class Intro extends Component {
 
 				</div>
 
-				<div className="col-two">
+				<div className="col-two" style={{'max-width': this.state.elemWidth}}>
 					<div className="Intro-manifeste card">
 						<div className="Intro-manifeste__image card-image">
 							<img src={this.state.imgPl}/>
@@ -99,9 +118,10 @@ class Intro extends Component {
 				</div>
 
 				<div className="col-three">
-					{this.state.availWidth > 1200 &&
+					{this.state.screenWidth > 1200 &&
 					<a className="twitter-timeline card"
-					   data-width="400"
+					   style={{width: '300px', height: '800px'}}
+					   data-width="300"
 					   data-height="800"
 					   data-theme="light"
 					   data-link-color="#E81C4F"
