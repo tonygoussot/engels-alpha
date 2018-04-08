@@ -57,7 +57,7 @@ class Intro extends Component {
 				<div className="col-one">
 					<div className="facebook-responsive" style={{'max-width': this.state.elemWidth}}>
 						<div className="fb-video Intro-video card"
-						     style={{width: this.state.elemWidth-10, height: this.state.elemWidth-10}}
+						     style={{width: this.state.elemWidth - 10, height: this.state.elemWidth - 10}}
 						     data-href="https://www.facebook.com/lafeteamacron/videos/2031186810482075/"
 						     data-width={this.state.elemWidth}
 						     data-show-text="false">
@@ -119,14 +119,14 @@ class Intro extends Component {
 
 				<div className="col-three">
 					{this.state.screenWidth > 1200 &&
-					<a className="twitter-timeline card"
-					   style={{width: '300px', height: '800px'}}
-					   data-width="300"
+					<a class="twitter-timeline"
+						style={{width: '300px', height: '800px'}}
+						 data-width="300"
+					   data-dnt="true"
 					   data-height="800"
-					   data-theme="light"
-					   data-link-color="#E81C4F"
-					   href="https://twitter.com/LaFeteaMacron">
-						Tweets by LaFeteAMacron
+					   href="https://twitter.com/hashtag/LaFeteaMacron"
+					   data-widget-id="983051222847549440">
+						Tweets sur #LaFeteaMacron
 					</a>}
 				</div>
 			</div>
