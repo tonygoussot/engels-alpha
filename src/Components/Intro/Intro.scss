@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.radio-parleur {
+  height: 300px;
+}
+
 .Intro-video {
   margin-top: 0;
   margin-bottom: 0;
@@ -24,21 +28,33 @@
 .Intro-networks,
 .Intro-resources {
   flex-grow: 1;
+  color: $secondary-color;
+}
+
+.logos {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-networks.card-action,
+.downloads.card-action {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
   color: $background-color;
+  text-transform: uppercase;
+  cursor: pointer;
 
-  .logos {
-    display: flex;
-    justify-content: space-evenly;
+  &:hover {
+    background-color: $secondary-color;
+    color: white !important;
   }
-  .social-networks > svg,
-  .social-networks > span {
-    font-size: 150px;
-    text-decoration: none;
-    color: $background-color;
 
-    &:hover {
-      color: black;
-    }
+  & > svg,
+  & > .material-icons {
+    font-size: 1.5rem;
+    margin-right: 10px;
   }
 }
 
@@ -58,27 +74,24 @@
     }
   }
 
-  &__sign {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-  }
-
   .sign__button {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: $background-color !important;
+    justify-content: flex-start;
+    text-transform: uppercase;
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+      background-color: $background-color;
+      color: white;
+    }
 
     & > i {
-      margin-right: 5px;
+      margin-right: 20px;
     }
   }
-}
-
-.downloads {
-  display: flex;
-  color: $background-color !important;
 }
 
 .Intro-manifeste__texte {
