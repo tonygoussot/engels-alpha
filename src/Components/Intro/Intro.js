@@ -11,6 +11,8 @@ class Intro extends Component {
 		this.state = {
 			tractoFile: '',
 			imgPl: '',
+			videoFile: '',
+			poster: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -46,8 +48,14 @@ class Intro extends Component {
 		const storage   = firebase.storage();
 		const plRef     = storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
 		const tractoRef = storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
+		const videoRef  = storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
+		const posterRef = storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
+
 		tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 		plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
+		videoRef.getDownloadURL().then(url => this.setState({videoFile: url}));
+		posterRef.getDownloadURL().then(url => this.setState({poster: url}));
+
 	}
 
 	render () {
@@ -55,7 +63,7 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
-					<div className="card">
+					<div className="card radio-parleur__card">
 						<div className="radio-parleur">
 							<iframe width={this.state.elemWidth - 10}
 							        height="300" scrolling="no" frameborder="no" allow="autoplay"
@@ -63,13 +71,16 @@ class Intro extends Component {
 							</iframe>
 						</div>
 					</div>
-					<div className="facebook-responsive" style={{'max-width': this.state.elemWidth}}>
-						<div className="fb-video Intro-video card"
-						     style={{width: this.state.elemWidth - 10, height: this.state.elemWidth - 10}}
-						     data-href="https://www.facebook.com/lafeteamacron/videos/2031186810482075/"
-						     data-width={this.state.elemWidth}
-						     data-show-text="false">
-						</div>
+					<div className="travail-video card" style={{'max-height': this.state.elemWidth - 10}}>
+						<video src={this.state.videoFile}
+						       width={this.state.elemWidth - 10}
+						       height={this.state.elemWidth - 10}
+						       controls
+						       poster={this.state.poster}>
+							Votre navigateur ne permet pas de lire les vidéos.
+							Mais vous pouvez toujours
+							<a href={this.state.videoFile}>la télécharger</a> !
+						</video>
 					</div>
 
 					<div className="Intro-networks card">
@@ -139,6 +150,16 @@ class Intro extends Component {
 							<i className="material-icons">assignment</i>
 							<span> Je signe l'appel sur change.org</span>
 						</a>
+					</div>
+					<div className="Subscribe-newsletter card">
+						<div className="card-content">
+							<span className="Subscribe-newsletter card-title"> LA LISTE DE DIFFUSION</span>
+						</div>
+						<div className="card-action">
+						<iframe src="https://landing.mailerlite.com/webforms/landing/b1s0p3"
+						        style={{border: 'none', width: '350px', height: '139px'}}>
+						</iframe>
+						</div>
 					</div>
 				</div>
 

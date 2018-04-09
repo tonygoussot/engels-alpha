@@ -9,20 +9,15 @@
 
 .radio-parleur {
   height: 300px;
+
+  &__card {
+    margin-top: 0;
+  }
 }
 
 .Intro-video {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.facebook-responsive {
-  overflow: hidden;
-}
-
-.facebook-responsive iframe {
-  height: 100%;
-  width: 100%;
 }
 
 .Intro-networks,
@@ -108,4 +103,8 @@
 
 .timeline-Widget.timeline-Widget--edge {
   border-radius: 2px !important;
+}
+
+.Subscribe-newsletter {
+  color: $secondary-color;
 }
