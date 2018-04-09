@@ -30,9 +30,7 @@
   display: flex;
   flex-direction: column;
 }
-
-.social-networks.card-action,
-.downloads.card-action {
+.resources.card-action {
   display: flex;
   align-items: center;
   font-size: 1rem;
@@ -43,6 +41,27 @@
 
   &:hover {
     background-color: $secondary-color;
+    color: white !important;
+  }
+
+  & > svg,
+  & > .material-icons {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+}
+
+.social-networks.card-action {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2196F3;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2196F3;
     color: white !important;
   }
 

@@ -91,17 +91,20 @@ class Intro extends Component {
 						</div>
 						<div className="logos">
 							<a className="social-networks facebook--link card-action"
-							   href="https://www.facebook.com/lafeteamacron/">
+							   href="https://www.facebook.com/lafeteamacron/"
+							   target="_blank">
 								<i className="fab fa-facebook-square"></i>
 								<span> La Page de la communauté </span>
 							</a>
 							<a className="social-networks card-action facebook--link"
-							   href="https://www.facebook.com/events/168405913879142/">
+							   href="https://www.facebook.com/events/168405913879142/"
+							   target="_blank">
 								<i className="fab fa-facebook-square"></i>
 								<span> Inscrivez-vous à l'évènement </span>
 							</a>
 							<a className="social-networks card-action"
-							   href="https://twitter.com/LaFeteaMacron">
+							   href="https://twitter.com/LaFeteaMacron"
+							   target="_blank">
 								<i className="fab fa-twitter-square"></i>
 								<span> Le Twitter du mouvement </span>
 							</a>
@@ -114,7 +117,9 @@ class Intro extends Component {
 								LE TRACT AUX CHEMINOT•E•S
 							</div>
 						</div>
-						<a className="card-action downloads" href={this.state.tractoFile}>
+						<a className="card-action resources"
+						   href={this.state.tractoFile}
+						   target="_blank">
 							<i className="material-icons">file_download</i>
 							<span>TELECHARGER LE TRACT</span>
 						</a>
@@ -127,7 +132,7 @@ class Intro extends Component {
 							</div>
 						</div>
 						<div className="logos">
-							<a className="social-networks facebook--link card-action"
+							<a className="resources card-action"
 							   href="mailto:contact@lafeteamacron.org">
 								<i class="material-icons">email</i>
 								<span> contact@lafeteamacron.org </span>
@@ -166,10 +171,10 @@ class Intro extends Component {
 				<div className="col-three">
 					{this.state.screenWidth > 1200 &&
 					<a class="twitter-timeline"
-					   style={{width: '300px', height: '800px'}}
+					   style={{width: '300px', height: '1000px'}}
 					   data-width="300"
 					   data-dnt="true"
-					   data-height="800"
+					   data-height="1000"
 					   href="https://twitter.com/hashtag/LaFeteaMacron"
 					   data-widget-id="983051222847549440">
 						Tweets sur #LaFeteaMacron
