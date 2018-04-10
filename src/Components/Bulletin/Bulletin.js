@@ -41,7 +41,7 @@ class Bulletin extends Component {
 		return (
 			<div className="Bulletin" style={{width: this.state.elemWidth}}>
 				<iframe width={Math.round(this.state.videoRes.w)} height={Math.round(this.state.videoRes.h)}
-				        src="https://www.youtube.com/embed/PJPi49pqDt8?rel=0"
+				        src="https://www.youtube.com/embed/jRkeXaIPaIw"
 				        frameBorder="0"
 				        allow="autoplay; encrypted-media" allowFullScreen></iframe>
 			</div>

@@ -161,9 +161,13 @@ class Intro extends Component {
 							<span className="Subscribe-newsletter card-title"> LA LISTE DE DIFFUSION</span>
 						</div>
 						<div className="card-action">
-						<iframe src="https://landing.mailerlite.com/webforms/landing/b1s0p3"
-						        style={{border: 'none', width: '350px', height: '139px'}}>
-						</iframe>
+							<iframe src="https://landing.mailerlite.com/webforms/landing/b1s0p3"
+							        style={{
+								        border: 'none',
+								        height: '180px',
+								        'max-width': this.state.elemWidth
+							        }}>
+							</iframe>
 						</div>
 					</div>
 				</div>
