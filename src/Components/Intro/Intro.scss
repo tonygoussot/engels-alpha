@@ -7,12 +7,8 @@
   justify-content: center;
 }
 
-.radio-parleur {
-  height: 300px;
-
-  &__card {
-    margin-top: 0;
-  }
+.card-title {
+  font-size: 22px !important;
 }
 
 .Intro-video {
@@ -21,9 +17,16 @@
 }
 
 .Intro-networks,
-.Intro-resources {
+.Intro-resources,
+.Intro-comites {
   flex-grow: 1;
   color: $secondary-color;
+  flex-wrap: wrap;
+  max-width: 390px;
+}
+
+.Intro-comites {
+  margin-top: 0px;
 }
 
 .logos {

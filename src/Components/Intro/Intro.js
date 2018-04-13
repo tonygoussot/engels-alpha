@@ -45,14 +45,38 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
-					<div className="card radio-parleur__card">
-						<div className="radio-parleur">
-							<iframe width={this.state.elemWidth - 10}
-							        height="300" scrolling="no" frameBorder="no" allow="autoplay"
-							        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/425192382&color=%2ff1744&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-							</iframe>
+
+					<div className="Intro-comites card">
+						<div className="card-content">
+							<div className="card-title">
+								TROUVEZ VOTRE COMITE
+							</div>
+						</div>
+						<div className="logos">
+							<a className="resources card-action"
+							   href="#section-trouver">
+								<i class="material-icons">search</i>
+								<span> Grâce à notre carte intéractive </span>
+							</a>
 						</div>
 					</div>
+
+					<div className="Intro-comites card">
+						<div className="card-content">
+							<div className="card-title">
+								VOUS CONSTITUEZ UN COMITE ?
+							</div>
+						</div>
+						<div className="logos">
+							<a className="resources card-action"
+							   href="#section-outils">
+								<i class="material-icons">keyboard_arrow_right</i>
+								<span> Nous vous proposons nos conseils </span>
+							</a>
+						</div>
+					</div>
+
+
 					<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
 						<video src={this.state.videoFile}
 						       width={this.state.elemWidth - 10}

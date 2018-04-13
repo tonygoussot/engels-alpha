@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Comite.scss'
 import {calcRes} from "../../Helpers/calcRes";
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 class Comite extends Component {
 	constructor (props) {
@@ -71,19 +72,23 @@ class Comite extends Component {
 		return (
 			<div className="Comite"
 			     style={{width: this.state.elemWidth}}>
-				<div className='Comite__title'>
-					<h1> Trouvez votre comité local sur notre carte interactive </h1>
-				</div>
+				<ScrollableAnchor id={'section-trouver'}>
+					<div className='Comite__title'>
+						<h1> Trouvez votre comité local sur notre carte interactive </h1>
+					</div>
+				</ScrollableAnchor>
 				<iframe src="https://www.google.com/maps/d/embed?mid=1LbB_kfMW6n_iKommVWPwmoLZELO6J0Vo"
 				        width={this.state.frameRes.w}
 				        height={this.state.frameRes.h}>
 				</iframe>
 
 				<div className="contact">
-					<div className='Comite__title2 tooloffer' style={{width: this.state.elemWidth}}>
-						<h3> Créez votre comité </h3>
-						<h3> Nous vous proposons une boîte à outils pour vous y aider !</h3>
-					</div>
+					<ScrollableAnchor id={'section-outils'}>
+						<div className='Comite__title2 tooloffer' style={{width: this.state.elemWidth}}>
+							<h3> Créez votre comité </h3>
+							<h3> Nous vous proposons une boîte à outils pour vous y aider !</h3>
+						</div>
+					</ScrollableAnchor>
 					<div className='Comite__title2 tellus' style={{width: this.state.elemWidth}}>
 						<span> Prévenez nous au comitefeteamacron@gmail.com !</span>
 					</div>
