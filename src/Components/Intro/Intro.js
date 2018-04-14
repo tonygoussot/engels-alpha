@@ -49,33 +49,28 @@ class Intro extends Component {
 					<div className="Intro-comites card">
 						<div className="card-content">
 							<div className="card-title">
-								TROUVEZ VOTRE COMITE
+								LES COMITES
 							</div>
 						</div>
 						<div className="logos">
 							<a className="resources card-action"
 							   href="#section-trouver">
 								<i class="material-icons">search</i>
-								<span> Grâce à notre carte intéractive </span>
+								<span> Localisez votre comité grâce à notre carte interactive </span>
 							</a>
-						</div>
-					</div>
-
-					<div className="Intro-comites card">
-						<div className="card-content">
-							<div className="card-title">
-								VOUS CONSTITUEZ UN COMITE ?
-							</div>
-						</div>
-						<div className="logos">
 							<a className="resources card-action"
 							   href="#section-outils">
-								<i class="material-icons">keyboard_arrow_right</i>
-								<span> Nous vous proposons nos conseils </span>
+								<i class="material-icons">lightbulb_outline</i>
+								<span> Retrouvez nos conseils d'organisation imprimables !</span>
+							</a>
+							<a className="resources card-action"
+							   href="http://discord-debout.fr/tractor/"
+							   target="_blank">
+								<i class="fas fa-bullhorn"></i>
+								<span> Générez des tracts pour votre comité </span>
 							</a>
 						</div>
 					</div>
-
 
 					<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
 						<video src={this.state.videoFile}
