@@ -68,7 +68,7 @@ class App extends Component {
                         }
                         />
                         <Route exact path="/comites" render={() =>
-                            <Comites/>
+                            <Comites storage={this.state.storage}/>
                         }
                         />
                         <Route exact path="/media" render={() =>
