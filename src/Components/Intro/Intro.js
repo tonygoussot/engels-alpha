@@ -28,9 +28,9 @@ class Intro extends Component {
 		if (this.props.width && this.props.width !== this.state.elemWidth) {
 			this.setElementsWidth(this.props.width);
 
-			const plRef     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+			const plRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
 			const tractoRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
-			const videoRef  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
+			const videoRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
 			const posterRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
@@ -48,17 +48,17 @@ class Intro extends Component {
 					<div className="card radio-parleur__card">
 						<div className="radio-parleur">
 							<iframe width={this.state.elemWidth - 10}
-							        height="300" scrolling="no" frameBorder="no" allow="autoplay"
-							        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/425192382&color=%2ff1744&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+									height="300" scrolling="no" frameBorder="no" allow="autoplay"
+									src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/425192382&color=%2ff1744&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
 							</iframe>
 						</div>
 					</div>
 					<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
 						<video src={this.state.videoFile}
-						       width={this.state.elemWidth - 10}
-						       height={this.state.elemWidth - 10}
-						       controls
-						       poster={this.state.poster}>
+							   width={this.state.elemWidth - 10}
+							   height={this.state.elemWidth - 10}
+							   controls
+							   poster={this.state.poster}>
 							Votre navigateur ne permet pas de lire les vidéos.
 							Mais vous pouvez toujours
 							<a href={this.state.videoFile}>la télécharger</a> !
@@ -89,6 +89,12 @@ class Intro extends Component {
 							   target="_blank">
 								<i className="fab fa-twitter-square"></i>
 								<span> Le Twitter du mouvement </span>
+							</a>
+							<a className="social-networks card-action"
+							   href="https://discord-debout.fr/tractor/"
+							   target="_blank">
+								<i className="fas fa-bullhorn"></i>
+								<span> Le générateur de tract de la Fête à Macron </span>
 							</a>
 						</div>
 					</div>
@@ -144,11 +150,11 @@ class Intro extends Component {
 						</div>
 						<div className="card-action">
 							<iframe src="https://landing.mailerlite.com/webforms/landing/b1s0p3"
-							        style={{
-								        border: 'none',
-								        height: '180px',
-								        maxWidth: this.state.elemWidth
-							        }}>
+									style={{
+										border: 'none',
+										height: '180px',
+										maxWidth: this.state.elemWidth
+									}}>
 							</iframe>
 						</div>
 					</div>
