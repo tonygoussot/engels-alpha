@@ -1,17 +1,4 @@
 .ComitesCarte {
-  &__title {
-    & > h1 {
-      font-size: 2rem;
-      margin: 0;
-    }
-
-    & > h2 {
-      font-size: 1.5rem;
-      margin: 0;
-      font-style: italic;
-    }
-  }
-
   &__map {
     margin-top: 1rem;
   }

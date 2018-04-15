@@ -8,14 +8,17 @@ class Menu extends Component {
 		return (
             <div className="Menu">
                 <Link to="/" className="Menu__link waves-effect waves-light btn">
-                    Accueil
+                    Infos
                 </Link>
                 <Link to="/comites" className="Menu__link waves-effect waves-light btn">
-                    Tout sur les comités
+                    Comités
                 </Link>
                 <Link to="/media" className="Menu__link waves-effect waves-light btn">
-                    Les vidéos
+                    Médias
                 </Link>
+	            <Link to="/media" className="Menu__link waves-effect waves-light btn">
+				            FAQ
+	            </Link>
             </div>
 		);
 	}
