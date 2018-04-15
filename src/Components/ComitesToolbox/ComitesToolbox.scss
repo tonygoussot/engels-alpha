@@ -1,6 +1,7 @@
 @import '../../Style/palette';
 
 .ComitesToolbox {
+
   &__title {
     & > h1 {
       font-size: 2rem;
@@ -8,10 +9,29 @@
     }
   }
 
-  .tools {
+  &__tools {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    .links {
+      magin-top: 1rem;
+
+      .link {
+        font-size: 1rem;
+        color: $secondary-color;
+        text-transform: uppercase;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+
+    .docs {
+      margin-top: 1rem;
+    }
 
     @media (orientation: landscape) {
       .docs {

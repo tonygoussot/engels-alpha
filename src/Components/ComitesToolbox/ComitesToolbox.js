@@ -52,13 +52,32 @@ class ComitesToolbox extends Component {
 
 	render () {
 		return (
-			<div className="ComitesToolbox">
+			<div className="ComitesToolbox Section">
 				<ScrollableAnchor id={'section-outils'}>
-					<div className='ComitesToolbox__title'>
-						<h1> La boîte à outils pour vous aider à monter votre propre comité! </h1>
+					<div className='Section__title'>
+						<h1> La boîte à outils </h1>
+						<h2> Pour vous aider à monter et animer votre propre comité! </h2>
 					</div>
 				</ScrollableAnchor>
-				<div className="tools">
+				<div className="ComitesToolbox__tools">
+					<div className="links">
+						<ul>
+							<li>
+								<a className="link"
+								   href="http://discord-debout.fr/tractor/"
+								   target="_blank">
+									<i class="fas fa-cog"></i>&nbsp;Générez des tracts pour votre comité
+								</a>
+							</li>
+							<li>
+								<a className="link"
+								   href="http://discord-debout.fr"
+								   target="_blank">
+									<i class="fab fa-discord"></i>&nbsp;Venez discuter de votre comité sur Discord debout
+								</a>
+							</li>
+						</ul>
+					</div>
 					<div className="docs">
 						<div className="docs__red">
 							<div className="doc doc__left">
@@ -69,7 +88,7 @@ class ComitesToolbox extends Component {
 							<div className="doc doc__right">
 								<img src={this.state.RR1jpg}/>
 								<a className="md-btn md-btn-raised" href={this.state.RR1pdf}
-								   download="rr1"  target="_blank">télécharger</a>
+								   download="rr1" target="_blank">télécharger</a>
 							</div>
 						</div>
 						<div className="docs__violet">
