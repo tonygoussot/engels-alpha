@@ -3,12 +3,38 @@ import './Intro.scss';
 
 const Manifeste = () => (
 	<div className="Manifeste">
-		<p>Depuis un an, Macron est un Robin des bois à l'envers, prenant aux pauvres pour donner aux riches. Depuis un an, il impose au pays et à ses habitants les plus fragiles une violente austérité dont les effets se font ressentir dans nos hôpitaux, nos maisons de retraite, nos écoles et nos universités. Pendant ce temps les multinationales font leur beurre sur le saccage de l'environnement et font disparaître les oiseaux.</p>
-		<p>En résumé : tout pour ceux qui ont déjà tout ; rien pour ceux « qui ne sont rien ».</p>
-		<p>Mais tout ne se passe pas aussi tranquillement. Partout ça résiste : les cheminots évidemment, les facs également, Air France, les hôpitaux, les éboueurs, les caissières, les électriciens, les femmes, les racisés, les chômeurs... Mais en ordre dispersé, sans leur trait d'union. Si ces ruisseaux de colère convergeaient, quel fleuve puissant ils formeraient !</p>
-		<p>Il y a autre chose aussi, moins visible, plus souterrain, mais plus massif, plus explosif : quelque chose qui ressemble à un vaste désir d’autre chose. Quoi? On ne sait pas, ou pas encore.</p>
-		<p>Face à la grisaille du monde qu'il nous impose, faisons la fête et montrons de quoi serait fait cet "autre chose". Donnons à son premier anniversaire un tour inattendu et faisons lui comprendre que voulons une vie différente plus juste, plus solidaire et plus conviviale. Premier anniversaire à l’Elysée ? Qu’il sente non pas la bougie mais le vent du boulet !</p>
-		<p>Au programme : concerts, fanfares, chars, bonne humeur, jongleurs et cracheurs de feu mais aussi débats et organisation de la suite !</p>
+		<p>Le jeudi c'est parti ! La mobilisation se poursuit, des manifestations auront lieu dans différentes villes ce jeudi 19 avril, c'est le
+			moment de se rassembler, de partout, par chez vous !</p>
+
+		<p>Ce jeudi, on appelle à des rassemblements devant toutes les gares du pays !</p>
+
+		<p>Pour vous organiser on vous propose un petit plan d'attaque :</p>
+
+		<p>N'hésitez pas à proposer à votre comité ou votre cercle de copains et copines l'idée d'un rassemblement jeudi !</p>
+		<p>C'est le moment de faire le lien entre les différentes organisations qui vous entourent, les syndicats, les partis, les associations de
+			quartier, les collectifs, c'est l'occasion de donner une voix et de mettre un visage sur les luttes locales !</p>
+		<p>Ensuite, il faut déterminer un lieu de rassemblement, une gare c'est un symbole fort mais ça peut être un autre lieu pratique et
+			accessible !</p>
+
+		<p>N'hésitez pas à vous organiser sur les réseaux sociaux et à diffuser un tract avant et le jour même.</p>
+
+		<p>Utilisez le générateur de tract à votre disposition !</p>
+
+		<p>N'hésitez pas à prévenir la presse locale 🙂</p>
+
+		<p>Et ça ce n'est que le début !</p>
+
+		<p>Pendant le rassemblement, c'est le moment d'avoir des interventions des différents secteurs en lutte, et de mettre à discussion : la fête
+			à Macron du 5 mai, et l'organisation d'actions locales par exemple.</p>
+
+		<p>Et c'est surtout le moment de débattre et de se rencontrer autour d'un même désir d'autre chose !</p>
+
+		<p>Prévenez le pôle comités locaux de vos actions pour ce jeudi : comitefeteamacron@gmail.com</p>
+
+		<p>Passez une belle semaine, une belle mobilisation jeudi, et continuez tout ce que vous faites car sans vous on ne peut rien, avec vous on
+			peut beaucoup.</p>
+
+		<p>L'Equipe.</p>
 	</div>
 );
 

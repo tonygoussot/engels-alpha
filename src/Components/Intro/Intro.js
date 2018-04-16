@@ -10,6 +10,7 @@ class Intro extends Component {
 			imgPl: '',
 			videoFile: '',
 			poster: '',
+			ref19: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -32,11 +33,13 @@ class Intro extends Component {
 			const tractoRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
 			const videoRef  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
 			const posterRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
+			const ref19     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
 			videoRef.getDownloadURL().then(url => this.setState({videoFile: url}));
 			posterRef.getDownloadURL().then(url => this.setState({poster: url}));
+			ref19.getDownloadURL().then(url => this.setState({ref19: url}));
 		}
 	}
 
@@ -72,7 +75,23 @@ class Intro extends Component {
 						</div>
 					</div>
 
-					<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
+					<div className="Intro-comites card">
+						<div className="card-content">
+							<div className="card-title">
+								LE TRACT SPECIAL 19 AVRIL
+							</div>
+						</div>
+						<div className="logos">
+							<a className="sign__button card-action"
+							   href={this.state.ref19}
+							   target="_blank">
+								<i class="material-icons">assignment</i>
+								<span> TELECHARGEZ LE TRACT SPECIAL </span>
+							</a>
+						</div>
+					</div>
+
+					{/*<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
 						<video src={this.state.videoFile}
 						       width={this.state.elemWidth - 10}
 						       height={this.state.elemWidth - 10}
@@ -82,7 +101,7 @@ class Intro extends Component {
 							Mais vous pouvez toujours
 							<a href={this.state.videoFile}>la télécharger</a> !
 						</video>
-					</div>
+					</div>*/}
 
 					<div className="Intro-networks card">
 						<div className="card-content">
@@ -122,7 +141,7 @@ class Intro extends Component {
 						   href={this.state.tractoFile}
 						   target="_blank">
 							<i className="material-icons">file_download</i>
-							<span>TELECHARGER LE TRACT</span>
+							<span>TELECHARGEZ LE TRACT</span>
 						</a>
 					</div>
 
@@ -146,16 +165,16 @@ class Intro extends Component {
 					<div className="Intro-manifeste card">
 						<div className="Intro-manifeste__image card-image">
 							<img src={this.state.imgPl}/>
-							<span className="card-title">LE MANIFESTE</span>
+							<span className="card-title">Jeudi 19 Avril</span>
 						</div>
 						<div className="Intro-manifeste__texte card-content">
 							<Manifeste/>
 						</div>
-						<a href={"https://www.change.org/p/le-peuple-appel-au-samedi-5-mai-faire-sa-f%C3%AAte-%C3%A0-macron"}
+						{/*<a href={"https://www.change.org/p/le-peuple-appel-au-samedi-5-mai-faire-sa-f%C3%AAte-%C3%A0-macron"}
 						   className="sign__button card-action">
 							<i className="material-icons">assignment</i>
 							<span> Je signe l'appel sur change.org</span>
-						</a>
+						</a>*/}
 					</div>
 					<div className="Subscribe-newsletter card">
 						<div className="card-content">

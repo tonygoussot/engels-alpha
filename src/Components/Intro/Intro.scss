@@ -28,6 +28,13 @@
 .Intro-comites {
   margin-top: 0;
   & > .logos > .resources {
+    color: #4CAF50;
+  }
+}
+
+.Intro-comites {
+  margin-top: 0;
+  & > .logos > .tract19 {
     color: #F44336;
   }
 }
@@ -78,6 +85,25 @@
   }
 }
 
+.sign__button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  background-color: $secondary-color !important;
+  color: white;
+
+  &:hover {
+    background-color: $background-color !important;
+    color: white;
+  }
+
+  & > i {
+    margin-right: 20px;
+  }
+}
+
 .Intro-manifeste {
   flex-grow: 1;
   height: auto;
@@ -91,25 +117,6 @@
 
     > img {
       top: -120px !important;
-    }
-  }
-
-  .sign__button {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    justify-content: flex-start;
-    text-transform: uppercase;
-    background-color: $secondary-color;
-    color: white;
-
-    &:hover {
-      background-color: $background-color;
-      color: white;
-    }
-
-    & > i {
-      margin-right: 20px;
     }
   }
 }
