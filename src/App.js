@@ -72,7 +72,7 @@ class App extends Component {
                         }
                         />
                         <Route exact path="/media" render={() =>
-                            <Media/>
+                            <Media storage={this.state.storage}/>
                         }/>
                     </div>
                 </Router>
