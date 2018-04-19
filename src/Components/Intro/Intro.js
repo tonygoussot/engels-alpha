@@ -52,32 +52,6 @@ class Intro extends Component {
 					<div className="Intro-comites card">
 						<div className="card-content">
 							<div className="card-title">
-								LES COMITES
-							</div>
-						</div>
-						<div className="logos">
-							<a className="resources card-action"
-							   href="#section-trouver">
-								<i class="material-icons">search</i>
-								<span> Localisez votre comité grâce à notre carte interactive </span>
-							</a>
-							<a className="resources card-action"
-							   href="#section-outils">
-								<i class="material-icons">lightbulb_outline</i>
-								<span> Retrouvez nos conseils d'organisation imprimables !</span>
-							</a>
-							<a className="resources card-action"
-							   href="http://discord-debout.fr/tractor/"
-							   target="_blank">
-								<i class="fas fa-bullhorn"></i>
-								<span> Générez des tracts pour votre comité </span>
-							</a>
-						</div>
-					</div>
-
-					<div className="Intro-comites card">
-						<div className="card-content">
-							<div className="card-title">
 								LE TRACT SPECIAL 19 AVRIL
 							</div>
 						</div>
@@ -90,18 +64,6 @@ class Intro extends Component {
 							</a>
 						</div>
 					</div>
-
-					{/*<div className="travail-video card" style={{maxHeight: this.state.elemWidth - 10}}>
-						<video src={this.state.videoFile}
-						       width={this.state.elemWidth - 10}
-						       height={this.state.elemWidth - 10}
-						       controls
-						       poster={this.state.poster}>
-							Votre navigateur ne permet pas de lire les vidéos.
-							Mais vous pouvez toujours
-							<a href={this.state.videoFile}>la télécharger</a> !
-						</video>
-					</div>*/}
 
 					<div className="Intro-networks card">
 						<div className="card-content">
@@ -159,23 +121,22 @@ class Intro extends Component {
 							</a>
 						</div>
 					</div>
-				</div>
 
-				<div className="col-two" style={{maxWidth: this.state.elemWidth}}>
-					<div className="Intro-manifeste card">
-						<div className="Intro-manifeste__image card-image">
-							<img src={this.state.imgPl}/>
-							<span className="card-title">Jeudi 19 Avril</span>
+					<div className="Intro-networks card">
+						<div className="card-content">
+							<div className="card-title">
+								SIGNEZ L'APPEL !
+							</div>
 						</div>
-						<div className="Intro-manifeste__texte card-content">
-							<Manifeste/>
+						<div className="logos">
+							<a href={"https://www.change.org/p/le-peuple-appel-au-samedi-5-mai-faire-sa-f%C3%AAte-%C3%A0-macron"}
+							   className="sign__button card-action">
+								<i className="material-icons">assignment</i>
+								<span> Je signe sur change.org</span>
+							</a>
 						</div>
-						{/*<a href={"https://www.change.org/p/le-peuple-appel-au-samedi-5-mai-faire-sa-f%C3%AAte-%C3%A0-macron"}
-						   className="sign__button card-action">
-							<i className="material-icons">assignment</i>
-							<span> Je signe l'appel sur change.org</span>
-						</a>*/}
 					</div>
+
 					<div className="Subscribe-newsletter card">
 						<div className="card-content">
 							<span className="Subscribe-newsletter card-title"> LA LISTE DE DIFFUSION</span>
@@ -188,6 +149,18 @@ class Intro extends Component {
 								        maxWidth: this.state.elemWidth
 							        }}>
 							</iframe>
+						</div>
+					</div>
+				</div>
+
+				<div className="col-two" style={{maxWidth: this.state.elemWidth}}>
+					<div className="Intro-manifeste card">
+						<div className="Intro-manifeste__image card-image">
+							<img src={this.state.imgPl}/>
+							<span className="card-title">Jeudi 19 Avril</span>
+						</div>
+						<div className="Intro-manifeste__texte card-content">
+							<Manifeste/>
 						</div>
 					</div>
 				</div>
