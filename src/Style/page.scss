@@ -19,18 +19,20 @@
   }
 
   .Section {
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 10vw 1rem 10vw;
 
-    &:nth-child(odd) {
+    &:nth-of-type(odd) {
       background-color: $background-color;
     }
 
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       background-color: lighten($background-color, 10%);
     }
 
 
     &__title {
+      text-align: center;
+
       & > h1 {
         font-size: 2rem;
         margin: 0;
