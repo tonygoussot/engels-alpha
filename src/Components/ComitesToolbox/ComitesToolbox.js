@@ -66,14 +66,14 @@ class ComitesToolbox extends Component {
 								<a className="link"
 								   href="http://discord-debout.fr/tractor/"
 								   target="_blank">
-									<i class="fas fa-cog"></i>&nbsp;Générez des tracts pour votre comité
+									<i className="fas fa-cog"></i>&nbsp;Générez des tracts pour votre comité
 								</a>
 							</li>
 							<li>
 								<a className="link"
 								   href="http://discord-debout.fr"
 								   target="_blank">
-									<i class="fab fa-discord"></i>&nbsp;Venez discuter de votre comité sur Discord debout
+									<i className="fab fa-discord"></i>&nbsp;Venez discuter de votre comité sur Discord debout
 								</a>
 							</li>
 						</ul>
