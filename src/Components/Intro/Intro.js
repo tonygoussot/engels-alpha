@@ -11,6 +11,7 @@ class Intro extends Component {
 			videoFile: '',
 			poster: '',
 			ref19: '',
+			ruffin19: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -29,17 +30,19 @@ class Intro extends Component {
 		if (this.props.width && this.props.width !== this.state.elemWidth) {
 			this.setElementsWidth(this.props.width);
 
-			const plRef     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
-			const tractoRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
-			const videoRef  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
-			const posterRef = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
-			const ref19     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
+			const plRef       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+			const tractoRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
+			const videoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
+			const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
+			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
+			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/afdaff16-af9a-4898-8624-fd8365a0df06.jpeg');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
 			videoRef.getDownloadURL().then(url => this.setState({videoFile: url}));
 			posterRef.getDownloadURL().then(url => this.setState({poster: url}));
 			ref19.getDownloadURL().then(url => this.setState({ref19: url}));
+			refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
 		}
 	}
 
@@ -48,22 +51,6 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
-
-					<div className="Intro-comites card">
-						<div className="card-content">
-							<div className="card-title">
-								LE TRACT SPECIAL 19 AVRIL
-							</div>
-						</div>
-						<div className="logos">
-							<a className="sign__button card-action"
-							   href={this.state.ref19}
-							   target="_blank">
-								<i class="material-icons">assignment</i>
-								<span> TELECHARGEZ LE TRACT SPECIAL </span>
-							</a>
-						</div>
-					</div>
 
 					<div className="Intro-networks card">
 						<div className="card-content">
@@ -155,13 +142,22 @@ class Intro extends Component {
 
 				<div className="col-two" style={{maxWidth: this.state.elemWidth}}>
 					<div className="Intro-manifeste card">
-						<div className="Intro-manifeste__image card-image">
-							<img src={this.state.imgPl}/>
+						<div>
+							<img style={{width: this.state.elemWidth - 10}}
+							     src={this.state.ruffin19}/>
+						</div>
+						<div className="Intro-manifeste__title card-image">
 							<span className="card-title">Jeudi 19 Avril</span>
 						</div>
 						<div className="Intro-manifeste__texte card-content">
 							<Manifeste/>
 						</div>
+						<a className="card-action resources"
+						   href={"https://stephaneputhod.wordpress.com/"}
+						   target="_blank">
+							<i class="material-icons">favorite</i>
+							<span>Découvrez Monsieur Alfred</span>
+						</a>
 					</div>
 				</div>
 

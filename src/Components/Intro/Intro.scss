@@ -25,18 +25,8 @@
   max-width: 390px;
 }
 
-.Intro-comites {
+.Intro-networks {
   margin-top: 0;
-  & > .logos > .resources {
-    color: #4CAF50;
-  }
-}
-
-.Intro-comites {
-  margin-top: 0;
-  & > .logos > .tract19 {
-    color: #F44336;
-  }
 }
 
 .logos {
@@ -110,6 +100,10 @@
   margin-top: 0;
   text-align: justify;
 
+  &__texte {
+    color: black;
+  }
+
   &__image {
     height: 144px;
     overflow: hidden;
@@ -119,10 +113,6 @@
       top: -120px !important;
     }
   }
-}
-
-.Intro-manifeste__texte {
-  color: black;
 }
 
 .Manifeste > p {

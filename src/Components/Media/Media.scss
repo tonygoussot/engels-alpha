@@ -49,6 +49,7 @@
       background: $secondary-color;
       color: #fff;
       outline: 0;
+      text-transform: uppercase;
       &:focus {
         background: darken($secondary-color, 12%)
       }
