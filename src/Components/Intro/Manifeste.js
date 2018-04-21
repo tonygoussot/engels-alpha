@@ -9,7 +9,7 @@ const Manifeste = () => (
 
 		<p>Découvrez nos affiches et nos tracts pour faire la fête à Macron !</p>
 
-		<p>Nous tenons à remercier Monsieur Alfred, auteur des magnifiques affiches de notre campagne, qui nous a fait dont de ses talents.</p>
+		<p>Nous tenons à remercier Monsieur Alfred, auteur des magnifiques affiches de notre campagne, qui nous a fait don de ses talents.</p>
 	</div>
 );
 
