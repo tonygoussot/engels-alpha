@@ -12,6 +12,7 @@ class Intro extends Component {
 			poster: '',
 			ref19: '',
 			ruffin19: '',
+			cagnotte: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -36,6 +37,7 @@ class Intro extends Component {
 			const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
 			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
 			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/afdaff16-af9a-4898-8624-fd8365a0df06.jpeg');
+			const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
@@ -43,6 +45,7 @@ class Intro extends Component {
 			posterRef.getDownloadURL().then(url => this.setState({poster: url}));
 			ref19.getDownloadURL().then(url => this.setState({ref19: url}));
 			refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
+			refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
 		}
 	}
 
@@ -51,6 +54,19 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
+
+					<div className="Intro-manifeste card">
+						<div>
+							<img style={{width: this.state.elemWidth - 10}}
+							     src={this.state.cagnotte}/>
+						</div>
+						<a className="sign__button card-action"
+						   href={"https://www.lepotcommun.fr/pot/jgw853ld"}
+						   target="_blank">
+							<i class="material-icons">favorite</i>
+							<span>Soutenez la fête à Macron !</span>
+						</a>
+					</div>
 
 					<div className="Intro-networks card">
 						<div className="card-content">
@@ -78,20 +94,6 @@ class Intro extends Component {
 								<span> Le Twitter du mouvement </span>
 							</a>
 						</div>
-					</div>
-
-					<div className="Intro-resources card">
-						<div className="Intro-resources__title card-content">
-							<div className="card-title">
-								LE TRACT AUX CHEMINOT•E•S
-							</div>
-						</div>
-						<a className="card-action resources"
-						   href={this.state.tractoFile}
-						   target="_blank">
-							<i className="material-icons">file_download</i>
-							<span>TELECHARGEZ LE TRACT</span>
-						</a>
 					</div>
 
 					<div className="Intro-networks card">

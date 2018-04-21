@@ -11,7 +11,7 @@ class Menu extends Component {
 					Infos
 				</Link>
 				<Link to="/comites" className="Menu__link waves-effect waves-light btn">
-					Comités
+					Votre Comité
 				</Link>
 				<Link to="/media" className="Menu__link waves-effect waves-light btn">
 					Affiches
@@ -19,6 +19,9 @@ class Menu extends Component {
 				<Link to="/tracts" className="Menu__link waves-effect waves-light btn">
 					Tracts
 				</Link>
+				{/*<Link to="/tracts" className="Menu__link waves-effect waves-light btn">
+					Venir le 5 mai
+				</Link>*/}
 			</div>
 		);
 	}
