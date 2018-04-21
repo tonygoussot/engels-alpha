@@ -10,6 +10,7 @@ import Menu from "./Components/Menu/Menu";
 import Comites from "./Components/Comites/Comites";
 import Media from "./Components/Media/Media";
 import Tracts from "./Components/Tracts/Tracts";
+import Nos1000Raisons from "./Components/Nos1000Raisons/Nos1000Raisons";
 
 class App extends Component {
 	static getScreenWidth () {
@@ -76,6 +77,9 @@ class App extends Component {
 						}/>
 						<Route exact path="/tracts" render={() =>
 							<Tracts storage={this.state.storage}/>
+						}/>
+						<Route exact path="/nos1000raisons" render={() =>
+							<Nos1000Raisons storage={this.state.storage}/>
 						}/>
 					</div>
 				</Router>
