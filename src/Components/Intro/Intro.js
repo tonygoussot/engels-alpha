@@ -36,7 +36,7 @@ class Intro extends Component {
 			const videoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
 			const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
 			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
-			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/afdaff16-af9a-4898-8624-fd8365a0df06.jpeg');
+			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
 			const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
@@ -63,7 +63,7 @@ class Intro extends Component {
 						<a className="sign__button card-action"
 						   href={"https://www.lepotcommun.fr/pot/jgw853ld"}
 						   target="_blank">
-							<i class="material-icons">favorite</i>
+							<i className="material-icons">favorite</i>
 							<span>Soutenez la fête à Macron !</span>
 						</a>
 					</div>
