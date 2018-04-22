@@ -7,7 +7,7 @@ class Menu extends Component {
 	render () {
 		return (
 			<div className="Menu">
-				<Link to="/" className="Menu__link waves-effect waves-light btn">
+				<Link to="/" className="Menu__link waves-effect waves-light btn" onClick={() => window.location.reload()}>
 					Infos
 				</Link>
 				<Link to="/comites" className="Menu__link waves-effect waves-light btn">
