@@ -7,9 +7,7 @@
   padding: 0 10vw 0 10vw;
 
   .title {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(left, red, violet, blue, green, indigo, red, violet, blue, green, indigo);
+    color: $secondary-color
   }
 
   .gallery {
