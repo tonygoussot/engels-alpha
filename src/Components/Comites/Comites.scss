@@ -1,3 +1,4 @@
+@import '../../style/palette';
 .Comites {
 
   max-width: 1200px;
@@ -5,5 +6,9 @@
   &__tellus {
     text-align: center;
     font-size: 1rem;
+  }
+
+  a {
+    color: $tertiary-color;
   }
 }

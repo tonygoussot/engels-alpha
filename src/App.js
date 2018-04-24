@@ -51,7 +51,6 @@ class App extends Component {
 		this.setState({storage: firebase.storage()});
 	}
 
-
 	componentWillUnmount () {
 		window.addEventListener("resize", null);
 	}

@@ -56,7 +56,7 @@ class Intro extends Component {
 				<div className="col-one">
 
 					<div className="Intro-manifeste card">
-						<div>
+						<div style={{height: "234px", width: this.state.elemWidth - 10}}>
 							<img style={{width: this.state.elemWidth - 10}}
 							     src={this.state.cagnotte}/>
 						</div>
@@ -163,7 +163,7 @@ class Intro extends Component {
 					</div>
 				</div>
 
-				<div className="col-three">
+				<div className="col-three" style={{width: "300px"}}>
 					{this.state.screenWidth > 1200 &&
 					<a className="twitter-timeline"
 					   style={{width: '300px', height: '1000px'}}

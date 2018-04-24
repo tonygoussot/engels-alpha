@@ -1,3 +1,5 @@
+@import '../../style/palette';
+
 .Menu {
     display: flex;
     margin: 10px 0px 10px 0px;
@@ -8,9 +10,11 @@
 
         &__link {
             width: 80%;
-
             &:not(:nth-child(1)) {
                 margin-top: 10px;
+            }
+            &:hover {
+                background-color: $secondary-color;
             }
         }
     }
@@ -22,6 +26,9 @@
         &__link {
             &:not(:nth-child(1)) {
                 margin-left: 5px;
+            }
+            &:hover {
+                background-color: $secondary-color;
             }
         }
     }
