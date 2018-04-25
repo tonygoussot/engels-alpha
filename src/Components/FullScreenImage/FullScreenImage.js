@@ -6,7 +6,8 @@ class FullScreenImage extends Component {
 		super(props);
 
 		this.state = {
-			image: this.props.image
+			image: this.props.image,
+			closedFullScreen: this.props.closedFullScreen
 		};
 	}
 
@@ -16,9 +17,11 @@ class FullScreenImage extends Component {
 
 	closeFullScreen() {
 		this.setState({image: null});
+		this.state.closedFullScreen();
 	}
 
 	render() {
+		console.log("image in fullscreen", this.state.image);
 		if(this.state.image) {
 			return (
 				<div className="Overlay" onClick={this.closeFullScreen.bind(this)}>

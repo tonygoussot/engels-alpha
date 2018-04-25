@@ -20,6 +20,10 @@ class Gallery extends Component {
 		this.setState({fullScreenImage: image});
 	}
 
+	closedFullScreen() {
+		this.setState({fullScreenImage: null});
+	}
+
 	render() {
 		return (
 			<div>
@@ -32,7 +36,7 @@ class Gallery extends Component {
 						/>
 					))}
 				</div>
-				<FullScreenImage image={this.state.fullScreenImage}/>
+				<FullScreenImage image={this.state.fullScreenImage} closedFullScreen={() => this.closedFullScreen()}/>
 			</div>
 
 		);
