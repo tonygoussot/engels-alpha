@@ -6,30 +6,74 @@ class Media extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			PAFjpg: '',
-			TUNjpg: '',
-			LOUjpg: '',
-			USIjpg: '',
-			POPjpg: '',
-			RPAjpg: ''
+			refs: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+			'0png': '',
+			'1png': '',
+			'2png': '',
+			'3png': '',
+			'4png': '',
+			'5png': '',
+			'6png': '',
+			'7png': '',
+			'8png': '',
+			'9png': '',
+			'0pdf': '',
+			'1pdf': '',
+			'2pdf': '',
+			'3pdf': '',
+			'4pdf': '',
+			'5pdf': '',
+			'6pdf': '',
+			'7pdf': '',
+			'8pdf': '',
+			'9pdf': '',
 		};
 	}
 
 	componentDidMount () {
-		const refPAFjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962927780117196152.jpg');
-		const refTUNjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962927780117196153.jpg');
-		const refLOUjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962927780117196154.jpg');
-		const refUSIjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962935652792249775.jpg');
-		const refPOPjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962935652792249776.jpg');
-		const refRPAjpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/photo5962935652792249777.jpg');
+		const ref0png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 0.png');
+		const ref1png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 1.png');
+		const ref2png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 2.png');
+		const ref3png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 3.png');
+		const ref4png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 4.png');
+		const ref5png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 5.png');
+		const ref6png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 6.png');
+		const ref7png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 7.png');
+		const ref8png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 8.png');
+		const ref9png = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/MonsieurAlfred_le5mai 9.png');
 
-		// Rouge
-		refPAFjpg.getDownloadURL().then(url => this.setState({PAFjpg: url}));
-		refTUNjpg.getDownloadURL().then(url => this.setState({TUNjpg: url}));
-		refLOUjpg.getDownloadURL().then(url => this.setState({LOUjpg: url}));
-		refUSIjpg.getDownloadURL().then(url => this.setState({USIjpg: url}));
-		refPOPjpg.getDownloadURL().then(url => this.setState({POPjpg: url}));
-		refRPAjpg.getDownloadURL().then(url => this.setState({RPAjpg: url}));
+		const ref0pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 0.pdf');
+		const ref1pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 1.pdf');
+		const ref2pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 2.pdf');
+		const ref3pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 3.pdf');
+		const ref4pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 4.pdf');
+		const ref5pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 5.pdf');
+		const ref6pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 6.pdf');
+		const ref7pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 7.pdf');
+		const ref8pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 8.pdf');
+		const ref9pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/vectorise/MonsieurAlfred_le5mai-vectoriel 9.pdf');
+
+		ref0png.getDownloadURL().then(url => this.setState({'0png': url}));
+		ref1png.getDownloadURL().then(url => this.setState({'1png': url}));
+		ref2png.getDownloadURL().then(url => this.setState({'2png': url}));
+		ref3png.getDownloadURL().then(url => this.setState({'3png': url}));
+		ref4png.getDownloadURL().then(url => this.setState({'4png': url}));
+		ref5png.getDownloadURL().then(url => this.setState({'5png': url}));
+		ref6png.getDownloadURL().then(url => this.setState({'6png': url}));
+		ref7png.getDownloadURL().then(url => this.setState({'7png': url}));
+		ref8png.getDownloadURL().then(url => this.setState({'8png': url}));
+		ref9png.getDownloadURL().then(url => this.setState({'9png': url}));
+
+		ref0pdf.getDownloadURL().then(url => this.setState({'0pdf': url}));
+		ref1pdf.getDownloadURL().then(url => this.setState({'1pdf': url}));
+		ref2pdf.getDownloadURL().then(url => this.setState({'2pdf': url}));
+		ref3pdf.getDownloadURL().then(url => this.setState({'3pdf': url}));
+		ref4pdf.getDownloadURL().then(url => this.setState({'4pdf': url}));
+		ref5pdf.getDownloadURL().then(url => this.setState({'5pdf': url}));
+		ref6pdf.getDownloadURL().then(url => this.setState({'6pdf': url}));
+		ref7pdf.getDownloadURL().then(url => this.setState({'7pdf': url}));
+		ref8pdf.getDownloadURL().then(url => this.setState({'8pdf': url}));
+		ref9pdf.getDownloadURL().then(url => this.setState({'9pdf': url}));
 	}
 
 	render () {
@@ -37,38 +81,18 @@ class Media extends Component {
 			<div className="Media">
 				<div className="Page__title">
 					<h1>Téléchargez vos affiches</h1>
+					<p>Tous les fichiers proposés sont au format vectoriel - pdf</p>
 				</div>
 				<div className="affiches">
-					<div className="affiche">
-						<img src={this.state.PAFjpg}/>
-						<a className="md-btn md-btn-raised" href={this.state.PAFjpg}
-						   download="rmc" target="_blank">télécharger</a>
-					</div>
-					<div className="affiche">
-						<img src={this.state.TUNjpg}/>
-						<a className="md-btn md-btn-raised" href={this.state.TUNjpg}
-						   download="rmc" target="_blank">télécharger</a>
-					</div>
-					<div className="affiche">
-						<img src={this.state.LOUjpg}/>
-								<a className="md-btn md-btn-raised" href={this.state.LOUjpg}
-								   download="rmc" target="_blank">télécharger</a>
-					</div>
-					<div className="affiche">
-						<img src={this.state.USIjpg}/>
-								<a className="md-btn md-btn-raised" href={this.state.USIjpg}
-								   download="rmc" target="_blank">télécharger</a>
-					</div>
-					<div className="affiche">
-						<img src={this.state.POPjpg}/>
-								<a className="md-btn md-btn-raised" href={this.state.POPjpg}
-								   download="rmc" target="_blank">télécharger</a>
-					</div>
-					<div className="affiche">
-						<img src={this.state.RPAjpg}/>
-								<a className="md-btn md-btn-raised" href={this.state.RPAjpg}
-								   download="rmc" target="_blank">télécharger</a>
-					</div>
+					{
+						Object.keys(this.state.refs).map((ref) => (
+							<div className="affiche">
+								<img src={this.state[`${ref}png`]}/>
+								<a className="md-btn md-btn-raised" href={this.state[`${ref}pdf`]}
+								   download="rmc" target="_blank">Télécharger</a>
+							</div>
+						))
+					}
 				</div>
 			</div>
 		);
