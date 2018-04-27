@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Intro.scss';
 import Manifeste from './Manifeste.js';
+import Manifeste2 from "./Manifeste2";
 
 class Intro extends Component {
 	constructor (props) {
@@ -13,6 +14,7 @@ class Intro extends Component {
 			ref19: '',
 			ruffin19: '',
 			cagnotte: '',
+			prog: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -38,6 +40,7 @@ class Intro extends Component {
 			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
 			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
 			const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
+			const refProg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
@@ -46,6 +49,7 @@ class Intro extends Component {
 			ref19.getDownloadURL().then(url => this.setState({ref19: url}));
 			refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
 			refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
+			refProg.getDownloadURL().then(url => this.setState({prog: url}));
 		}
 	}
 
@@ -143,6 +147,16 @@ class Intro extends Component {
 				</div>
 
 				<div className="col-two" style={{maxWidth: this.state.elemWidth}}>
+					<div className="Intro-manifeste card">
+						<div>
+							<img style={{width: this.state.elemWidth - 10}}
+							     src={this.state.prog}/>
+						</div>
+						<div className="Intro-manifeste__texte card-content">
+							<Manifeste2/>
+						</div>
+					</div>
+
 					<div className="Intro-manifeste card">
 						<div>
 							<img style={{width: this.state.elemWidth - 10}}

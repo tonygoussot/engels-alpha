@@ -22,6 +22,9 @@ class Menu extends Component {
 				<Link to="/nos1000raisons" className="Menu__link waves-effect waves-light btn">
 					1000 raisons
 				</Link>
+				{/*<Link to="/logos" className="Menu__link waves-effect waves-light btn">
+					Ils seront à la fête
+				</Link>*/}
 			</div>
 		);
 	}

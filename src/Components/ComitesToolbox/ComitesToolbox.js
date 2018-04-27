@@ -15,7 +15,8 @@ class ComitesToolbox extends Component {
 			VMCjpg: '',
 			VMCpdf: '',
 			VR1jpg: '',
-			VR1pdf: ''
+			VR1pdf: '',
+			BUSxls: ''
 		};
 	}
 
@@ -36,6 +37,7 @@ class ComitesToolbox extends Component {
 		const refVMCpdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/comites/V Monter Comite.pdf');
 		const refVR1jpg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/comites/V Reunion 1.jpg');
 		const refVR1pdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/comites/V Reunion 1.pdf');
+		const refBUSxls = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/Resa Bus.xlsx');
 
 		// Rouge
 		refRMCjpg.getDownloadURL().then(url => this.setState({RMCjpg: url}));
@@ -48,6 +50,8 @@ class ComitesToolbox extends Component {
 		refVMCpdf.getDownloadURL().then(url => this.setState({VMCpdf: url}));
 		refVR1jpg.getDownloadURL().then(url => this.setState({VR1jpg: url}));
 		refVR1pdf.getDownloadURL().then(url => this.setState({VR1pdf: url}));
+
+		refBUSxls.getDownloadURL().then(url => this.setState({BUSxls: url}));
 	}
 
 	render () {
@@ -66,14 +70,21 @@ class ComitesToolbox extends Component {
 								<a className="link"
 								   href="http://discord-debout.fr/tractor2/"
 								   target="_blank">
-									<i class="fas fa-cog"></i>&nbsp; A vos tracts! Invitez vos copains et copines à nous rejoindre à Paris.
+									<i className="fas fa-cog"> </i>&nbsp; Invitez vos copains et copines à nous rejoindre à l'aide de notre générateur de tracts
 								</a>
 							</li>
 							<li>
 								<a className="link"
 								   href="http://discord-debout.fr"
 								   target="_blank">
-									<i class="fab fa-discord"></i>&nbsp;Venez discuter de votre comité sur Discord debout
+									<i className="fab fa-discord"> </i>&nbsp; Venez discuter de votre comité sur Discord debout
+								</a>
+							</li>
+							<li>
+								<a className="link"
+								   href={this.state.BUSxls}
+								   target="_blank">
+									<i className="fas fa-bus"> </i>&nbsp; Préparez votre bus pour le 5 mai à l'aide de notre tableur
 								</a>
 							</li>
 						</ul>
