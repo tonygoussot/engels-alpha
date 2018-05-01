@@ -40,7 +40,7 @@ class Intro extends Component {
 			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
 			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
 			const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
-			const refProg = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
+			const refProg     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
 
 			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
@@ -58,6 +58,17 @@ class Intro extends Component {
 			<div className="Intro">
 
 				<div className="col-one">
+
+					<div className="Intro-networks card">
+						<div className="logos">
+							<iframe width="390" height="315"
+							        src="https://www.youtube.com/embed/MOX3-ZPw3eM"
+							        frameborder="0"
+							        allow="autoplay; encrypted-media"
+							        allowfullscreen>
+							</iframe>
+						</div>
+					</div>
 
 					<div className="Intro-manifeste card">
 						<div style={{height: "234px", width: this.state.elemWidth - 10}}>
@@ -154,6 +165,9 @@ class Intro extends Component {
 						</div>
 						<div className="Intro-manifeste__texte card-content">
 							<Manifeste2/>
+							<div>
+								<span></span>
+							</div>
 						</div>
 					</div>
 
