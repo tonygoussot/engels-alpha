@@ -60,6 +60,21 @@ class Intro extends Component {
 				<div className="col-one">
 
 					<div className="Intro-networks card">
+						<div className="card-content">
+							<div className="card-title">
+								CONFERENCE DE PRESSE
+							</div>
+						</div>
+						<div className="logos">
+							<a className="sign__button card-action"
+							   href="https://www.facebook.com/lafeteamacron/videos/2047971548803601/">
+								<i class="material-icons">cast</i>
+								<span> REVIVEZ LE LIVE SUR NOTRE PAGE FACEBOOK </span>
+							</a>
+						</div>
+					</div>
+
+					<div className="Intro-networks card">
 						<div className="logos">
 							<iframe width="390" height="315"
 							        src="https://www.youtube.com/embed/MOX3-ZPw3eM"
@@ -69,7 +84,7 @@ class Intro extends Component {
 							</iframe>
 						</div>
 					</div>
-
+					{/*https://www.facebook.com/lafeteamacron/*/}
 					<div className="Intro-manifeste card">
 						<div style={{height: "234px", width: this.state.elemWidth - 10}}>
 							<img style={{width: this.state.elemWidth - 10}}
