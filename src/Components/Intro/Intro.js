@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './Intro.scss';
-import Manifeste from './Manifeste.js';
-import Manifeste2 from "./Manifeste2";
+import Manifeste3 from "./Manifeste3";
 
 class Intro extends Component {
 	constructor (props) {
@@ -15,6 +14,8 @@ class Intro extends Component {
 			ruffin19: '',
 			cagnotte: '',
 			prog: '',
+			plan1: '',
+			plan2: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -32,25 +33,29 @@ class Intro extends Component {
 	componentDidMount () {
 		if (this.props.width && this.props.width !== this.state.elemWidth) {
 			this.setElementsWidth(this.props.width);
-
-			const plRef       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
-			const tractoRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
-			const videoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
-			const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
-			const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
-			const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
-			const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
-			const refProg     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
-
-			tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
-			plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
-			videoRef.getDownloadURL().then(url => this.setState({videoFile: url}));
-			posterRef.getDownloadURL().then(url => this.setState({poster: url}));
-			ref19.getDownloadURL().then(url => this.setState({ref19: url}));
-			refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
-			refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
-			refProg.getDownloadURL().then(url => this.setState({prog: url}));
 		}
+
+		const plRef       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+		const tractoRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
+		const videoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
+		const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
+		const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
+		const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
+		const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
+		const refProg     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
+		const refPlan1    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif2.png');
+		const refPlan2    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif3.png');
+
+		tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
+		plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
+		videoRef.getDownloadURL().then(url => this.setState({videoFile: url}));
+		posterRef.getDownloadURL().then(url => this.setState({poster: url}));
+		ref19.getDownloadURL().then(url => this.setState({ref19: url}));
+		refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
+		refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
+		refProg.getDownloadURL().then(url => this.setState({prog: url}));
+		refPlan1.getDownloadURL().then(url => this.setState({plan1: url}));
+		refPlan2.getDownloadURL().then(url => this.setState({plan2: url}));
 	}
 
 	render () {
@@ -62,13 +67,28 @@ class Intro extends Component {
 					<div className="Intro-networks card">
 						<div className="card-content">
 							<div className="card-title">
+								RENDEZ-VOUS 12H OPERA !
+							</div>
+						</div>
+						<div className="logos">
+							<iframe width="390" height="315"
+							        src="https://www.youtube.com/embed/wd_kzm01gcI"
+							        frameBorder="0" allow="autoplay; encrypted-media"
+							        allowFullScreen>
+							</iframe>
+						</div>
+					</div>
+
+					<div className="Intro-networks card">
+						<div className="card-content">
+							<div className="card-title">
 								CONFERENCE DE PRESSE
 							</div>
 						</div>
 						<div className="logos">
 							<a className="sign__button card-action"
 							   href="https://www.facebook.com/lafeteamacron/videos/2047971548803601/">
-								<i class="material-icons">cast</i>
+								<i className="material-icons">cast</i>
 								<span> REVIVEZ LE LIVE SUR NOTRE PAGE FACEBOOK </span>
 							</a>
 						</div>
@@ -78,9 +98,9 @@ class Intro extends Component {
 						<div className="logos">
 							<iframe width="390" height="315"
 							        src="https://www.youtube.com/embed/MOX3-ZPw3eM"
-							        frameborder="0"
+							        frameBorder="0"
 							        allow="autoplay; encrypted-media"
-							        allowfullscreen>
+							        allowFullScreen>
 							</iframe>
 						</div>
 					</div>
@@ -172,52 +192,28 @@ class Intro extends Component {
 					</div>
 				</div>
 
-				<div className="col-two" style={{maxWidth: this.state.elemWidth}}>
+				<div className="col-one">
 					<div className="Intro-manifeste card">
-						<div>
+						<div style={{height: "234px", width: this.state.elemWidth - 10}}>
 							<img style={{width: this.state.elemWidth - 10}}
-							     src={this.state.prog}/>
+							     src={this.state.plan2}/>
 						</div>
-						<div className="Intro-manifeste__texte card-content">
-							<Manifeste2/>
-							<div>
-								<span></span>
-							</div>
-						</div>
-					</div>
-
-					<div className="Intro-manifeste card">
-						<div>
-							<img style={{width: this.state.elemWidth - 10}}
-							     src={this.state.ruffin19}/>
-						</div>
-						<div className="Intro-manifeste__title card-image">
-							<span className="card-title">Jeudi 19 Avril</span>
-						</div>
-						<div className="Intro-manifeste__texte card-content">
-							<Manifeste/>
-						</div>
-						<a className="card-action resources"
-						   href={"https://stephaneputhod.wordpress.com/"}
+						<a className="sign__button card-action"
+						   href={this.state.plan2}
 						   target="_blank">
-							<i class="material-icons">favorite</i>
-							<span>Découvrez Monsieur Alfred</span>
+							<i className="material-icons">zoom_out_map</i>
+							<span>Le placement des cortèges</span>
 						</a>
 					</div>
+
+					<div className="Intro-manifeste card">
+						<div>
+							<img style={{width: this.state.elemWidth - 10}}
+							     src={this.state.plan1}/>
+						</div>
+					</div>
 				</div>
 
-				<div className="col-three" style={{width: "300px"}}>
-					{this.state.screenWidth > 1200 &&
-					<a className="twitter-timeline"
-					   style={{width: '300px', height: '1000px'}}
-					   data-width="300"
-					   data-dnt="true"
-					   data-height="1000"
-					   href="https://twitter.com/hashtag/LaFeteaMacron"
-					   data-widget-id="983051222847549440">
-						Tweets sur #LaFeteaMacron
-					</a>}
-				</div>
 			</div>
 		);
 	}
