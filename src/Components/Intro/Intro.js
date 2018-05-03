@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './Intro.scss';
-import Manifeste3 from "./Manifeste3";
 
 class Intro extends Component {
 	constructor (props) {
@@ -13,7 +12,6 @@ class Intro extends Component {
 			ref19: '',
 			ruffin19: '',
 			cagnotte: '',
-			prog: '',
 			plan1: '',
 			plan2: '',
 			screenWidth: props.width,
@@ -42,7 +40,6 @@ class Intro extends Component {
 		const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
 		const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
 		const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
-		const refProg     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/affiches/Affiche_prog.png');
 		const refPlan1    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif2.png');
 		const refPlan2    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif3.png');
 
@@ -53,7 +50,6 @@ class Intro extends Component {
 		ref19.getDownloadURL().then(url => this.setState({ref19: url}));
 		refRuffin19.getDownloadURL().then(url => this.setState({ruffin19: url}));
 		refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
-		refProg.getDownloadURL().then(url => this.setState({prog: url}));
 		refPlan1.getDownloadURL().then(url => this.setState({plan1: url}));
 		refPlan2.getDownloadURL().then(url => this.setState({plan2: url}));
 	}
