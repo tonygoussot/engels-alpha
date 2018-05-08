@@ -6,29 +6,20 @@ class Tracts extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			T5M1: '',
-			T5M2: '',
-			T5M1A: '',
-			T5M1B: '',
-			T5M2A: '',
-			T5M2B: '',
+			T26M1: '',
+			T26M1A: '',
+			T26M1B: '',
 		};
 	}
 
 	componentDidMount () {
-		const refT5M1jpg  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M1.pdf');
-		const refT5M2jpg  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M2.pdf');
-		const refT5M1Apng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M1A.png');
-		const refT5M1Bpng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M1B.png');
-		const refT5M2Apng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M2A.png');
-		const refT5M2Bpng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T5M2B.png');
+		const refT26M1jpg  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T26M1.pdf');
+		const refT26M1Apng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T26M1A.png');
+		const refT26M1Bpng = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tracts/T26M1B.png');
 
-		refT5M1jpg.getDownloadURL().then(url => this.setState({T5M1: url}));
-		refT5M2jpg.getDownloadURL().then(url => this.setState({T5M2: url}));
-		refT5M1Apng.getDownloadURL().then(url => this.setState({T5M1A: url}));
-		refT5M1Bpng.getDownloadURL().then(url => this.setState({T5M1B: url}));
-		refT5M2Apng.getDownloadURL().then(url => this.setState({T5M2A: url}));
-		refT5M2Bpng.getDownloadURL().then(url => this.setState({T5M2B: url}));
+		refT26M1jpg.getDownloadURL().then(url => this.setState({T26M1: url}));
+		refT26M1Apng.getDownloadURL().then(url => this.setState({T26M1A: url}));
+		refT26M1Bpng.getDownloadURL().then(url => this.setState({T26M1B: url}));
 	}
 
 	render () {
@@ -39,16 +30,9 @@ class Tracts extends Component {
 				</div>
 				<div className="affiches">
 					<div className="affiche">
-						<img src={this.state.T5M1A}/>
-						<img src={this.state.T5M1B}/>
-						<a className="md-btn md-btn-raised" href={this.state.T5M1}
-						   download="rmc" target="_blank">télécharger</a>
-					</div>
-
-					<div className="affiche">
-						<img src={this.state.T5M2A}/>
-						<img src={this.state.T5M2B}/>
-						<a className="md-btn md-btn-raised" href={this.state.T5M2}
+						<img src={this.state.T26M1A}/>
+						<img src={this.state.T26M1B}/>
+						<a className="md-btn md-btn-raised" href={this.state.T26M1}
 						   download="rmc" target="_blank">télécharger</a>
 					</div>
 				</div>
