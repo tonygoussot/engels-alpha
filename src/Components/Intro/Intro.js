@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Intro.scss';
+import Manifeste from "./Manifeste";
 
 class Intro extends Component {
 	constructor (props) {
@@ -14,6 +15,8 @@ class Intro extends Component {
 			cagnotte: '',
 			plan1: '',
 			plan2: '',
+			CP5M: '',
+			illusCP5M: '',
 			screenWidth: props.width,
 			elemWidth: props.width
 		};
@@ -33,15 +36,17 @@ class Intro extends Component {
 			this.setElementsWidth(this.props.width);
 		}
 
-		const plRef       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
-		const tractoRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
-		const videoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
-		const posterRef   = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
-		const ref19       = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
-		const refRuffin19 = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
-		const refCagnotte = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
-		const refPlan1    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif2.png');
-		const refPlan2    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif3.png');
+		const plRef        = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poing-levé.jpg');
+		const tractoRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/TractCheminot_FeteAMacron5mai.pdf');
+		const videoRef     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/#5mai - #LaFeteaMacron - Du mouvement Social !.mp4');
+		const posterRef    = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/poster3.png');
+		const ref19        = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/FICHE 19 .png');
+		const refRuffin19  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/photo5972006975908719918.jpg');
+		const refCagnotte  = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/unecagnotte.jpg');
+		const refPlan1     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif2.png');
+		const refPlan2     = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/cortege/plan manif3.png');
+		const refCP5M      = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/communiqués/CP5M.pdf');
+		const refIllusCP5M = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/photos/5M/Fête à Macron-11-sm.jpg');
 
 		tractoRef.getDownloadURL().then(url => this.setState({tractoFile: url}));
 		plRef.getDownloadURL().then(url => this.setState({imgPl: url}));
@@ -52,6 +57,8 @@ class Intro extends Component {
 		refCagnotte.getDownloadURL().then(url => this.setState({cagnotte: url}));
 		refPlan1.getDownloadURL().then(url => this.setState({plan1: url}));
 		refPlan2.getDownloadURL().then(url => this.setState({plan2: url}));
+		refCP5M.getDownloadURL().then(url => this.setState({CP5M: url}));
+		refIllusCP5M.getDownloadURL().then(url => this.setState({illusCP5M: url}));
 	}
 
 	render () {
@@ -88,7 +95,7 @@ class Intro extends Component {
 
 					<div className="Intro-networks card">
 						<div className="card-content">
-							<div className="card-title">
+							<div classNam e="card-title">
 								MOBILISONS-NOUS !
 							</div>
 						</div>
@@ -161,25 +168,28 @@ class Intro extends Component {
 				</div>
 
 				<div className="col-one">
-					<div className="Intro-manifeste card">
-						<div style={{height: "234px", width: this.state.elemWidth - 10}}>
-							<img style={{width: this.state.elemWidth - 10}}
-							     src={this.state.plan2}/>
+
+					<div className="Intro-networks card">
+						<div className='image-title'>
+							<img style={{width: '390px', height: '585px'}}
+							     src={this.state.illusCP5M}/>
 						</div>
-						<a className="sign__button card-action"
-						   href={this.state.plan2}
+						<div className="Intro-networks__title card-image">
+							<span className="card-title">QUE LA FÊTE COMMENCE !</span>
+						</div>
+						{/*<div className="Intro-networks__texte card-content">
+							<Manifeste/>
+						</div>*/}
+						<a className="card-action resources"
+						   href={this.state.CP5M}
 						   target="_blank">
-							<i className="material-icons">zoom_out_map</i>
-							<span>Le placement des cortèges</span>
+							<i class="material-icons">
+								description
+							</i>
+							<span>Notre communiqué</span>
 						</a>
 					</div>
 
-					<div className="Intro-manifeste card">
-						<div>
-							<img style={{width: this.state.elemWidth - 10}}
-							     src={this.state.plan1}/>
-						</div>
-					</div>
 				</div>
 
 			</div>
