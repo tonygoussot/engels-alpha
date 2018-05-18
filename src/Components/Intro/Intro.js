@@ -177,9 +177,6 @@ class Intro extends Component {
 						<div className="Intro-networks__title card-image">
 							<span className="card-title">QUE LA FÊTE COMMENCE !</span>
 						</div>
-						{/*<div className="Intro-networks__texte card-content">
-							<Manifeste/>
-						</div>*/}
 						<a className="card-action resources"
 						   href={this.state.CP5M}
 						   target="_blank">

@@ -6,4 +6,10 @@ body {
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   background-color: #E53935;
-  color: white; }
+  color: white; 
+  --c1: #E97778;
+  --c2: #89C7B6;
+  --c3: #FFD57E;
+  --c4: #AD84C7;
+  --c5: #7998C9;
+}
