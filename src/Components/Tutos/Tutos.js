@@ -11,7 +11,6 @@ class Tutos extends Component {
 	}
 
 	componentDidMount () {
-
 		const refApdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tutos/RLFAMA.pdf');
 		const refBpdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tutos/RLFAMB.pdf');
 		const refCpdf = this.props.storage.refFromURL('gs://lafeteamacron.appspot.com/tutos/RLFAMC.pdf');

@@ -62,7 +62,7 @@ class App extends Component {
 	render () {
 		return (
 			<div className="fam">
-				<Header/>
+				<Header storage={this.state.storage}/>
 				<Router>
 					<div>
 						<Menu/>

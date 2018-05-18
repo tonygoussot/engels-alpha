@@ -4,37 +4,12 @@
   justify-content: center;
   height: 100px;
   align-items: center;
+  margin-top: 1rem;
 }
 
-@media (min-width: 400px) {
-  .Header-title {
-    font-family: 'Sue Ellen Francisco';
-    font-size: 2.5em;
-    text-transform: uppercase;
-    margin-bottom: 0;
-  }
-
-  .Header-sub {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .Header-title {
-    font-family: 'Sue Ellen Francisco';
-    font-size: 2.2em;
-    text-transform: uppercase;
-  }
-
-  .Header-sub {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    text-transform: uppercase;
-    margin-top: 0;
-  }
+.Header-logo {
+  width: 350px;
+  min-height: 71.5px;
 }
 
 .card {
