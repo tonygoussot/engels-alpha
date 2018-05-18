@@ -7,14 +7,6 @@ class Media extends Component {
 		super(props);
 		this.state = {
 			refs: ['U', 'Z', 'A', 'B', 'C', 'D', 6, 7, 8, 9],
-			'6png': '',
-			'7png': '',
-			'8png': '',
-			'9png': '',
-			'6pdf': '',
-			'7pdf': '',
-			'8pdf': '',
-			'9pdf': ''
 		};
 	}
 

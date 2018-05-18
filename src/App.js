@@ -9,6 +9,7 @@ import Accueil from "./Components/Accueil/Accueil";
 import Menu from "./Components/Menu/Menu";
 import Comites from "./Components/Comites/Comites";
 import Media from "./Components/Media/Media";
+import Tutos from "./Components/Tutos/Tutos";
 import Tracts from "./Components/Tracts/Tracts";
 import Nos1000Raisons from "./Components/Nos1000Raisons/Nos1000Raisons";
 import Logos from "./Components/Logos/Logos";
@@ -67,14 +68,15 @@ class App extends Component {
 						<Menu/>
 						<Route exact path="/" render={() =>
 							<Accueil storage={this.state.storage} width={this.state.width}/>
-						}
-						/>
+						}/>
 						<Route exact path="/comites" render={() =>
 							<Comites storage={this.state.storage}/>
-						}
-						/>
+						}/>
 						<Route exact path="/media" render={() =>
 							<Media storage={this.state.storage}/>
+						}/>
+						<Route exact path="/tutos" render={() =>
+							<Tutos storage={this.state.storage}/>
 						}/>
 						<Route exact path="/tracts" render={() =>
 							<Tracts storage={this.state.storage}/>
